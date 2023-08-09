@@ -1,0 +1,12 @@
+server:
+  port: 9999
+
+spring:
+  rabbitmq:
+    port: 5672
+    host: rabbitmq
+    username: quest
+    password: quest
+    listener:
+      direct:
+        default-requeue-rejected: true
