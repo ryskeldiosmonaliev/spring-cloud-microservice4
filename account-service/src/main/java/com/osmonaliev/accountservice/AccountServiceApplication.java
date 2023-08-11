@@ -1,15 +1,17 @@
-package com.osmonaliev.billservice;
+package com.osmonaliev.accountservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
-@SpringBootApplication
+
+@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @EnableDiscoveryClient
-public class BillServiceApplication {
+public class AccountServiceApplication {
 public static void main(String[] args) {
-	SpringApplication.run(BillServiceApplication.class, args);
+	
+	SpringApplication.run(AccountServiceApplication.class, args);
 }
 
 }

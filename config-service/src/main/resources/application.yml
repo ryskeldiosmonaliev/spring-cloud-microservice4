@@ -4,11 +4,11 @@ spring:
       server:
         native:
           search-locations: classpath:/services
-          profiles:
-            active: native
-            security:
-              user:
-                password: admin
-
+  profiles:
+    active: native
+  security:
+    user2:
+      password: admin
 server:
-  port: 8081
+  port: 8888
+
