@@ -7,8 +7,9 @@ spring:
   profiles:
     active: native
   security:
-    user2:
+    user:
       password: admin
+
 server:
   port: 8888
 
