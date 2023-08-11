@@ -27,7 +27,7 @@ public BillResponseDto updateBill(@PathVariable Long billId,
                                   @RequestBody BillRequestDto billRequestDto ){
 	return new  BillResponseDto(billService.updateBill(billId,billRequestDto.getAccountId(),billRequestDto.getAmount(),billRequestDto.getIsDefault(),billRequestDto.getOverdraftEnabled()));
 }
-@DeleteMapping( "/{billId")
+@DeleteMapping( "/{billId}")
 public BillResponseDto deleteBill(@PathVariable Long billId){
 	return  new BillResponseDto(billService.getBillById(billId));
 }
