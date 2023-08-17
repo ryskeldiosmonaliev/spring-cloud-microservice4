@@ -6,6 +6,9 @@ import com.osmonaliev.billservice.servic.BillService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @RestController
 public class BillController {
 private final BillService billService;
@@ -29,6 +32,13 @@ public BillResponseDto updateBill(@PathVariable Long billId,
 }
 @DeleteMapping( "/{billId}")
 public BillResponseDto deleteBill(@PathVariable Long billId){
-	return  new BillResponseDto(billService.getBillById(billId));
+	return  new BillResponseDto(billService.deleteBill(billId));
+}
+@GetMapping("/account/{accountId}")
+public List<BillResponseDto> getBillsByAccountId(@PathVariable Long accountId){
+	return billService.getBillsByAccountId(accountId)
+			.stream()
+			.map(BillResponseDto::new)
+			.collect(Collectors.toList());
 }
 }

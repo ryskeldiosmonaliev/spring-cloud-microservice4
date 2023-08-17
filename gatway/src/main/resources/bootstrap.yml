@@ -3,7 +3,7 @@ spring:
     name: gatway-service
   cloud:
     config:
-      url: http://localhost:8001
+      url: http://localhost:8888
       fail-fast: true
       password: admin
       username: user

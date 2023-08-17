@@ -12,10 +12,8 @@ spring:
     password: romaroma21roma
     driver-class-name: org.postgresql.Driver
 
-
 server:
   servlet:
     context-path: /bills
   port: 7000
-
 

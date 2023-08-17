@@ -28,6 +28,9 @@ dependencyManagement {
     }
 }
 dependencies {
+    // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-bootstrap
+    implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap:4.0.0'
+
     // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-mail
     implementation 'org.springframework.boot:spring-boot-starter-mail:3.1.1'
 // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
@@ -39,10 +42,12 @@ dependencies {
 // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:4.0.2'
 // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-sleuth
-    implementation 'org.springframework.cloud:spring-cloud-starter-sleuth:3.1.7'
+    implementation 'org.springframework.cloud:spring-cloud-starter-sleuth:2.2.6.RELEASE'
 // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-hystrix
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix:2.2.10.RELEASE'
 // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator
     implementation 'org.springframework.boot:spring-boot-starter-actuator:3.1.2'
 testImplementation 'junit:junit:4.1'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
 }
